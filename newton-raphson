@@ -1,0 +1,25 @@
+//Newton Raphson Method  my
+
+#include<iostream>
+using namespace std;
+#define m x*x*x-2*x-5
+#define n 3*x*x-2
+int main()
+{
+    float a=0,b=0,x=2,x1=0;
+    cout<<"a"<<"\t\t\t"<<"b"<<"\t\t\t"<<"x"<<endl;
+    while(1)
+    {
+        a=m;
+        b=n;
+        x1=x-(a/b);
+        cout<<a<<"\t\t\t"<<b<<"\t\t\t"<<x1<<endl;
+        if((x1-x)<0.001)
+        {
+         cout<<"\nThe Required Result is="<<x1<<endl;
+            break;
+        }
+        x=x1;
+    }
+    return 0;
+}
